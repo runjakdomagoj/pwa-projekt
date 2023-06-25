@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+    <link rel="stylesheet" type="text/css" href="../styles/styleUnos.css">
+    <script src="../JS/nav.js"></script> 
+
+    <title>Log In Administracija</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../images/welt_logo.png" alt="" width="110" style="padding: 10px;">
+        </div>
+        <nav id="myTopnav">
+            <a href="../PHP/index.php">HOME</a>
+            <a href="../PHP/kategorija.php?id=kultura">KULTURA</a>
+            <a href="../PHP/kategorija.php?id=sport">SPORT</a>
+            <a href="../HTML/login.html" class="active">ADMINISTRACIJA</a>
+            <a href="../HTML/unos.html">UNOS</a>
+            <a href="#" class="icon" onclick="mobileNavigationHandler()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <h2 style="padding-left: 25px;">LOG IN</h2>
+        <section role="main">
+            <form enctype="multipart/form-data" action="../PHP/loginProvjera.php" method="POST">
+            
+            <div class="form-item">
+            <span id="porukaUsername" style="color: red;"></span>
+            <label for="content">Korisničko ime:</label>
+            
+            
+            <div class="form-field">
+            <input type="text" name="username" id="username" class="formfield-textual">
+            </div>
+            </div>
+            
+            <div class="form-item">
+            <span id="porukaPass" style="color: red;"></span>
+            <label for="pphoto">Lozinka: </label>
+            <div class="form-field">
+            <input style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px;" type="password" name="pass" id="pass" class="formfield-textual">
+            </div>
+            </div>
+            <br>
+            <div class="form-item">
+            <button type="submit" value="Prijava" id="slanje">Prijava</button>
+            </div>
+            
+            </form>
+            </section>
+            <section>
+                <a style="padding:14px 16px; text-decoration: none; color: white; background-color: #064B71; margin-top: 25px;" href="../HTML/registracija.html">REGISTRIRAJ SE</a>
+            </section>
+            <script src="../JS/loginValidacija.js"></script> 
+        </section>
+    </main>
+    <footer>
+        <img src="../images/welt_logo.png" alt="" width="110" style="padding: 30px;">
+    </footer>
+</body>
+</html>
+
