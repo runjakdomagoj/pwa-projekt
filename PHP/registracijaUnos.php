@@ -47,7 +47,7 @@
             $hashed_password = password_hash($lozinka, CRYPT_BLOWFISH);
             $razina = 0;
             $registriranKorisnik = '';
-            //Provjera postoji li u bazi već korisnik s tim korisničkim imenom
+
             $sql = "SELECT korisnicko_ime FROM korisnik WHERE korisnicko_ime = ?";
             $stmt = mysqli_stmt_init($dbc);
             if (mysqli_stmt_prepare($stmt, $sql)) {
@@ -58,9 +58,8 @@
             if (mysqli_stmt_num_rows($stmt) > 0) {
                 $msg = 'Korisničko ime već postoji!';
                 echo '<p style="padding:25px;">' . $msg . '</p>';
-                #echo $msg;
             } else {
-                // Ako ne postoji korisnik s tim korisničkim imenom - Registracija korisnika u bazi pazeći na SQL injection
+
                 $sql = "INSERT INTO korisnik (ime, prezime,korisnicko_ime, lozinka,
         razina)VALUES (?, ?, ?, ?, ?)";
                 $stmt = mysqli_stmt_init($dbc);

@@ -62,7 +62,6 @@ if ($db) {
             echo '<p>';
             echo "<p style='font-size: 14px;'>" . $row['datum'] . "</p>";
             echo '</article>';
-
         }
         echo '</section>';
         ?>
@@ -88,7 +87,6 @@ if ($db) {
             echo '<p>';
             echo "<p style='font-size: 14px;'>" . $row['datum'] . "</p>";
             echo '</article>';
-
         }
         echo '</section>';
         ?>

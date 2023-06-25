@@ -44,7 +44,6 @@
             $lozinka = $_POST['pass'];
             $hashed_password = password_hash($lozinka, CRYPT_BLOWFISH);
 
-            //Provjera postoji li u bazi već korisnik s tim korisničkim imenom
             $query = "SELECT * FROM korisnik WHERE korisnicko_ime='$username'";
             $result = mysqli_query($dbc, $query);
             $row = mysqli_fetch_array($result);

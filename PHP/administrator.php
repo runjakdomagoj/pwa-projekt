@@ -72,8 +72,7 @@
                     <label for="pphoto">Slika:</label>
                     <div class="form-field">
                         <input hidden type="text" name="filename" value="<?php echo $row['filename']; ?>" id="">
-                        <input type="file" class="input-text" id="pphoto" value="<?php echo $row['filename']; ?>"
-                            name="pphoto" />
+                        <input type="file" class="input-text" id="pphoto" value="<?php echo $row['filename']; ?>" name="pphoto" />
                         <br>
                         <?php echo '<img src="' . "../images/" . $row['filename'] . '" width=100px>' ?>
                     </div>
@@ -81,18 +80,15 @@
                 <div class="form-item">
                     <label for="category">Kategorija vijesti:</label>
                     <div class="form-field">
-                        <select name="category" id="category" class="form-field-textual"
-                            value="<?php echo $row['kategorija']; ?>">
+                        <select name="category" id="category" class="form-field-textual" value="<?php echo $row['kategorija']; ?>">
                             <option <?php if (strtolower($selected) == "sport") {
-                                echo "selected ";
-                            }
-                            ;
-                            echo 'value="Sport"'; ?>>Sport</option>
+                                        echo "selected ";
+                                    };
+                                    echo 'value="Sport"'; ?>>Sport</option>
                             <option <?php if (strtolower($selected) == "kultura") {
-                                echo "selected ";
-                            }
-                            ;
-                            echo 'value="Kultura"'; ?>>Kultura</option>
+                                        echo "selected ";
+                                    };
+                                    echo 'value="Kultura"'; ?>>Kultura</option>
                         </select>
                     </div>
                 </div>
@@ -151,7 +147,7 @@
                 </div>
             </form>
             <br>
-            <?php
+        <?php
         }
         ?>
 

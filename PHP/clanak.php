@@ -55,12 +55,9 @@ while ($row = $result->fetch_assoc()) {
         while ($row = $result->fetch_assoc()) {
             echo "<article>";
             echo "<h2 style='padding:0;'>" . $row['naslov'] . "</h2>";
-            #echo "<br>";
             echo "<p>" . "Stand: " . $row['datum'] . "</p>";
-            #echo "<br>";
             echo '<img style="width:100%;" src="' . '../images/' . $row['filename'] . '"';
             echo "<br>";
-            #echo "<h3>" . $row['sazetak'] . "</h3>";
             echo "<p>" . $row['tekst'] . "</p>";
             echo "</article>";
         }

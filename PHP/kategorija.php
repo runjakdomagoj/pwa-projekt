@@ -50,7 +50,6 @@ $id = $_GET['id'];
         </h2>
 
         <?php
-        #$kategorija=$_GET[kategorija];
         $query = "SELECT * FROM vijesti WHERE arhiva=0 AND kategorija='$id'";
         $result = mysqli_query($db, $query);
         $i = 0;
@@ -74,7 +73,6 @@ $id = $_GET['id'];
                 echo "</section> <section>";
                 $i = 0;
             }
-
         }
         echo '</section>';
         ?>

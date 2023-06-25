@@ -4,7 +4,6 @@ error_reporting(0);
 $title = $_POST['title'];
 $about = $_POST['about'];
 $content = $_POST['content'];
-#$image=$_POST['pphoto'];
 $category = $_POST['category'];
 $date = date('d.m.Y.');
 
@@ -12,8 +11,8 @@ $filename = $_FILES["uploadfile"]["name"];
 $tempname = $_FILES["uploadfile"]["tmp_name"];
 $folder = "../images/" . $filename;
 
-echo $filename;
-echo $tempname;
+#echo $filename;
+#echo $tempname;
 
 if (isset($_POST['archive'])) {
     $archive = 1;
@@ -28,13 +27,13 @@ if ($dbc) {
 }
 
 $sql = "INSERT INTO vijesti (datum, naslov, sazetak, tekst, kategorija, arhiva, filename ) values (?, ?, ?, ?, ?, ?, ?)";
-/* Inicijalizira statement objekt nad konekcijom */
+
 $stmt = mysqli_stmt_init($dbc);
-/* Povezuje parametre statement objekt s upitom */
+
 if (mysqli_stmt_prepare($stmt, $sql)) {
-    /* Povezuje parametre i njihove tipove s statement objektom */
+
     mysqli_stmt_bind_param($stmt, 'sssssis', $date, $title, $about, $content, $category, $archive, $filename);
-    /* Izvršava pripremljeni upit */
+
     mysqli_stmt_execute($stmt);
 }
 
